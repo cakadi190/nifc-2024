@@ -12,16 +12,22 @@
   "dependencies": {
     "@fontsource/jetbrains-mono": "^5.0.19",
     "@fontsource/rubik": "^5.0.19",
+    "@nuxt/image": "^1.6.0",
+    "@nuxtjs/google-fonts": "^3.2.0",
     "@types/bootstrap": "^5.2.10",
     "@types/jquery": "^3.5.29",
+    "@vueuse/motion": "^2.1.0",
     "bootstrap": "^5.3.3",
-    "jquery": "4.0.0-beta",
+    "jquery": "^3.7.1",
     "nuxt": "^3.11.2",
-    "sass": "^1.75.0",
+    "nuxt-svgo": "^4.0.0",
+    "nuxt-swiper": "^1.2.2",
+    "sass": "^1.76.0",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
+    "add": "^2.0.6",
     "nuxt-icon": "^0.6.10"
   }
 }

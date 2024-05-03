@@ -1,0 +1,25 @@
+@each $color, $value in $theme-colors {
+  .bg-#{$color} {
+    color: color-contrast($value, #000, #fff) !important;
+  }
+
+  .bg-light-#{$color} {
+    background: rgba(var(--#{$prefix}#{$color}-rgb), .125) !important;
+  }
+}
+
+.bg-body {
+  background: $body-bg !important;
+
+  [data-bs-theme=dark] & {
+    background: $body-bg-dark !important;
+  }
+}
+
+.color-body {
+  color: $body-color !important;
+
+  [data-bs-theme=dark] & {
+    color: $body-color-dark !important;
+  }
+}

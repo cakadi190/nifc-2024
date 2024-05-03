@@ -1,0 +1,61 @@
+.form-label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-required>label,
+label.form-required {
+  display: flex;
+  gap: .25rem;
+  align-items: center;
+
+  &::after {
+    content: '*';
+    color: $danger;
+    font-size: 1.5em;
+    line-height: 1;
+  }
+}
+
+.form-control,
+.form-control-plaintext,
+.form-select {
+
+  &:focus,
+  &:active {
+    box-shadow: inset 0 0 0 1px $primary;
+    border-color: $primary;
+  }
+}
+
+.form-unified {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .form-control {
+    position: relative;
+
+    &:first-child {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:not(:first-child) {
+      border-top-color: transparent;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+
+      &:focus,
+      &:active,
+      &:focus-visible,
+      &:focus-within {
+        border-top-color: $primary;
+      }
+    }
+  }
+}

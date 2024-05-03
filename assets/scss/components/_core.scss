@@ -1,0 +1,33 @@
+body::selection,
+body::-moz-selection {
+  background-color: rgba($primary, .125);
+  color: $primary;
+  text-shadow: none;
+}
+
+// Simplebar Scrollbar
+.simplebar-scrollbar {
+  &::before {
+    transition: all .2s;
+    background: rgba($body-color, .5);
+  }
+}
+
+// Heading
+@for $i from 1 through 6 {
+  h#{$i} {
+    transition: all .2s;
+  }
+}
+
+a {
+  transition: all .2s;
+
+  &:hover {
+    @for $i from 1 through 6 {
+      h#{$i} {
+        color: $primary;
+      }
+    }
+  }
+}
