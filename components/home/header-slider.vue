@@ -83,7 +83,7 @@ const swiperItems = [
 
 <style lang="scss" scoped>
 #masthead {
-	height: 100vh;
+	height: 100dvh;
 }
 
 .swiper-items {
