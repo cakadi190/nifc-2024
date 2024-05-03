@@ -27,7 +27,7 @@
 					<div class="container-wider">
 						<div class="gradient-overlay"></div>
 						<div class="row">
-							<div class="col-md-6">
+							<div class="col-lg-6">
 								<h1 class="slider-title">
 									{{ item.title }}
 								</h1>
@@ -121,7 +121,7 @@ const swiperItems = [
 
 		@media screen and (max-width: 1600px) {
 			line-height: 1.25;
-			font-size: 2.25rem;
+			font-size: 2.5rem;
 		}
 	}
 
@@ -131,8 +131,8 @@ const swiperItems = [
 		font-family: var(--bs-font-sans-serif);
 
 		@media screen and (max-width: 1600px) {
-			line-height: 1.25;
-			font-size: 1.25rem;
+			line-height: 1.5;
+			font-size: 1.5rem;
 		}
 	}
 }
@@ -215,6 +215,10 @@ const swiperItems = [
 	}
 
 	@media screen and (max-width: 992px) {
+		left: 1rem !important;
+	}
+
+	@media screen and (max-width: 767px) {
 		display: none;
 	}
 

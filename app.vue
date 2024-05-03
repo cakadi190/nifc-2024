@@ -44,6 +44,10 @@ onMounted(() => {
 			font-size: 3.5rem;
 			font-weight: normal;
 			font-family: var(--bs-font-serif);
+
+			@media screen and (max-width: 992px) {
+				font-size: 2.5rem;
+			}
 		}
 
 		.section-subtitle {
@@ -51,6 +55,10 @@ onMounted(() => {
 			font-size: 2rem;
 			font-weight: 600;
 			font-family: var(--bs-font-sans-serif);
+      
+			@media screen and (max-width: 992px) {
+				font-size: 1.5rem;
+			}
 		}
 	}
 
@@ -59,6 +67,10 @@ onMounted(() => {
 		font-size: 3.5rem;
 		font-weight: normal;
 		font-family: var(--bs-font-serif);
+
+		@media screen and (max-width: 992px) {
+			font-size: 2.5rem;
+		}
 	}
 
 	.section-subtitle {
@@ -66,6 +78,10 @@ onMounted(() => {
 		font-size: 2.5rem;
 		font-weight: 600;
 		font-family: var(--bs-font-sans-serif);
+    
+		@media screen and (max-width: 992px) {
+			font-size: 1.5rem;
+		}
 	}
 }
 

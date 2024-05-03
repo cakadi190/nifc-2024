@@ -129,10 +129,10 @@ export default defineComponent({
 
 		&.scrolled {
 			padding: 1rem 1.5rem;
-			background: rgba(var(--bs-white-rgb), 0.75);
+			background: rgba(lighten(#805231, 55%), 0.75);
 			backdrop-filter: blur(1rem);
 			margin-top: 1rem;
-			border-color: var(--bs-white);
+			border-color: rgba(lighten(#805231, 55%), 0.25);
 		}
 	}
 }
@@ -140,7 +140,6 @@ export default defineComponent({
 .nav-item {
 	.nav-link {
 		position: relative;
-    font-weight: 600;
     color: var(--bs-dark);
 
 		&::after {
@@ -173,6 +172,10 @@ export default defineComponent({
 		background: var(--bs-primary);
 		color: var(--bs-white);
 		border-radius: var(--bs-border-radius);
+
+    &:hover {
+      color: var(--bs-white);
+    }
 	}
 }
 </style>
