@@ -6,15 +6,13 @@
 					<img :src="imageLogo" alt="logo" class="navbar-logo" />
 				</router-link>
 				<button
-					class="navbar-toggler"
+					class="btn btn-link d-lg-none"
 					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navbarSupportedContent"
-					aria-controls="navbarSupportedContent"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
+					data-bs-toggle="offcanvas"
+					data-bs-target="#offcanvasExample"
+					aria-controls="offcanvasExample"
 				>
-					<span class="navbar-toggler-icon"></span>
+					<Icon name="fa:bars" />
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav gap-3 me-auto">
@@ -23,7 +21,12 @@
 							:key="index"
 							class="nav-item"
 						>
-							<router-link class="nav-link" :class="{ active: item.active }" aria-current="page" :to="item.link">
+							<router-link
+								class="nav-link"
+								:class="{ active: item.active }"
+								aria-current="page"
+								:to="item.link"
+							>
 								{{ item.title }}
 							</router-link>
 						</li>
@@ -39,6 +42,43 @@
 			</nav>
 		</div>
 	</nav>
+
+	<div
+		class="offcanvas offcanvas-start"
+		tabindex="-1"
+		id="offcanvasExample"
+		aria-labelledby="offcanvasExampleLabel"
+	>
+		<div class="offcanvas-header">
+			<h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+			<button
+				type="button"
+				class="btn-close"
+				data-bs-dismiss="offcanvas"
+				aria-label="Close"
+			></button>
+		</div>
+		<div class="offcanvas-body">
+			<div>
+				Some text as placeholder. In real life you can have the elements you
+				have chosen. Like, text, images, lists, etc.
+			</div>
+			<div class="dropdown mt-3">
+				<button
+					class="btn btn-secondary dropdown-toggle"
+					type="button"
+					data-bs-toggle="dropdown"
+				>
+					Dropdown button
+				</button>
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="#">Action</a></li>
+					<li><a class="dropdown-item" href="#">Another action</a></li>
+					<li><a class="dropdown-item" href="#">Something else here</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script lang="ts" setup>
@@ -140,7 +180,7 @@ export default defineComponent({
 .nav-item {
 	.nav-link {
 		position: relative;
-    color: var(--bs-dark);
+		color: var(--bs-dark);
 
 		&::after {
 			content: "";
@@ -156,7 +196,8 @@ export default defineComponent({
 			background: var(--bs-primary);
 		}
 
-		&:hover, &.active {
+		&:hover,
+		&.active {
 			color: var(--bs-primary);
 
 			&::after {
@@ -173,9 +214,9 @@ export default defineComponent({
 		color: var(--bs-white);
 		border-radius: var(--bs-border-radius);
 
-    &:hover {
-      color: var(--bs-white);
-    }
+		&:hover {
+			color: var(--bs-white);
+		}
 	}
 }
 </style>

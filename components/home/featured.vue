@@ -1,5 +1,5 @@
 <template>
-	<section class="section-ns-wider">
+	<section class="section-ns-wider" id="featured">
 		<div class="container-small">
 			<h3 class="section-subtitle opacity-50">Informasi</h3>
 			<h2 class="section-title pb-5 mb-5">
@@ -50,7 +50,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-	name: "AboutUs",
+	name: "FeaturedSection",
 });
 </script>
 

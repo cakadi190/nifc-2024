@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import headerSlider from '~/components/home/header-slider.vue';
-import aboutUs from '~/components/home/about-us.vue';
+import featuredSection from '~/components/home/featured.vue';
 
 useSeoMeta({
 	title: "Museum Trinil",
@@ -14,6 +14,6 @@ useHead({
 <template>
 	<div id="homepage-wrapper">
 		<header-slider />
-    <about-us />
+    <featured-section />
 	</div>
 </template>
