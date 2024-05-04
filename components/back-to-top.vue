@@ -1,5 +1,5 @@
 <template>
-  <button class="back-to-top" v-show="showButton" @click="scrollToTop">
+  <button class="back-to-top" :class="{hide: !showButton}" @click="scrollToTop">
     <Icon name="fa:chevron-up" />
   </button>
 </template>
@@ -12,14 +12,13 @@ export default defineComponent({
 });
 </script>
 
-
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
 
 const showButton = ref(false);
 
 const handleScroll = () => {
-  showButton.value = window.scrollY > 300;
+  showButton.value = window.scrollY > 50;
 };
 
 const scrollToTop = () => {
@@ -38,11 +37,11 @@ onUnmounted(() => {
 });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .back-to-top {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 1.5rem;
+  right: 1.5rem;
   width: 3rem;
   height: 3rem;
   display: flex;
@@ -54,9 +53,15 @@ onUnmounted(() => {
   outline: none;
   cursor: pointer;
   opacity: .5;
-  transition: opacity 0.3s ease;
+  transition: all .3s ease;
   border-radius: .5rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
+  z-index: 1000;
+
+  &.hide {
+    opacity: 0;
+    bottom: 0;
+  }
 }
 
 .back-to-top:hover {

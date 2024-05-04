@@ -20,7 +20,7 @@
 								<Icon :name="item.icon" size="64" />
 							</div>
 
-							<h4 class="mt-4 mb-3">{{ item.title }}</h4>
+							<h4 class="mt-4 mb-3" style="font-family: var(--bs-font-serif);letter-spacing: .125rem;">{{ item.title }}</h4>
 							<div v-html="item.desc" />
 
 							<div class="mt-3">

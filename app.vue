@@ -55,7 +55,8 @@ onMounted(() => {
 			font-size: 2rem;
 			font-weight: 600;
 			font-family: var(--bs-font-sans-serif);
-      
+			position: relative;
+
 			@media screen and (max-width: 992px) {
 				font-size: 1.5rem;
 			}
@@ -78,7 +79,8 @@ onMounted(() => {
 		font-size: 2.5rem;
 		font-weight: 600;
 		font-family: var(--bs-font-sans-serif);
-    
+		position: relative;
+
 		@media screen and (max-width: 992px) {
 			font-size: 1.5rem;
 		}
@@ -111,5 +113,36 @@ onMounted(() => {
 			max-width: calc(100% - 2rem);
 		}
 	}
+}
+
+/* Define warna scrollbar */
+$scrollbar-color: #ffebdc;
+$scrollbar-thumb-color: #63421f;
+$scrollbar-hover-color: #472b0f;
+
+/* Gaya umum untuk scrollbar */
+::-webkit-scrollbar {
+	width: 10px; /* Lebar scrollbar */
+}
+
+/* Gaya untuk bagian yang bisa di-geser */
+::-webkit-scrollbar-thumb {
+	background-color: $scrollbar-thumb-color;
+	border-radius: 5px; /* Sudut melengkung */
+}
+
+/* Gaya saat mengarahkan kursor ke scrollbar */
+::-webkit-scrollbar-thumb:hover {
+	background-color: $scrollbar-hover-color;
+}
+
+/* Gaya untuk bagian track scrollbar (bagian yang tidak bergerak) */
+::-webkit-scrollbar-track {
+	background-color: $scrollbar-color;
+}
+
+/* Gaya untuk bagian bawah dan atas scrollbar */
+::-webkit-scrollbar-button {
+	display: none; /* Sembunyikan tombol bawah dan atas */
 }
 </style>

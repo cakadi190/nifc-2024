@@ -61,22 +61,22 @@ const swiperItems = [
 	{
 		title: "Jelajahi Keberadaban Manusia Purba di Musium Trinil",
 		desc: "Temukan jejak manusia purba di Musium Trinil dengan eksplorasi yang memukau dalam sejarah evolusi manusia.",
-		background: "/images/Museum-Trinil.jpg",
+		background: "/images/slider-home/1.jpg",
 	},
 	{
 		title: "Misteri Fosil Homo Erectus",
 		desc: "Telusuri misteri fosil Homo Erectus di Musium Trinil: pengalaman mendalam dalam perjalanan evolusi manusia.",
-		background: "/images/museum-trinil-2-1024x683.jpg",
+		background: "/images/slider-home/2.jpg",
 	},
 	{
 		title: "Penemuan Artefak Prasejarah",
 		desc: "Terpesona dengan penemuan artefak prasejarah di Musium Trinil: jendela ke masa lalu yang menakjubkan.",
-		background: "/images/PXL_20211031_100304170_11zon.jpg",
+		background: "/images/slider-home/3.jpg",
 	},
 	{
 		title: "Eksplorasi Situs Penggalian",
 		desc: "Jelajahi situs penggalian arkeologi di Musium Trinil: menyelami kekayaan sejarah bumi dan manusia.",
-		background: "/images/627da6607e945.jpeg",
+		background: "/images/slider-home/4.jpeg",
 	},
 ];
 </script>
@@ -95,7 +95,7 @@ const swiperItems = [
 		left: 0;
 		width: 100%; /* Lebar gradient */
 		height: 100%;
-		background: rgba(0,0,0,.75);
+		background: rgba(0, 0, 0, 0.75);
 	}
 
 	.row {
@@ -111,9 +111,14 @@ const swiperItems = [
 		margin-bottom: 1.5rem;
 		font-family: var(--bs-font-serif);
 		line-height: 1.25;
-    color: white;
+		color: white;
 
 		@media screen and (max-width: 1600px) {
+			line-height: 1.25;
+			font-size: 3rem;
+		}
+
+		@media screen and (max-width: 1200px) {
 			line-height: 1.25;
 			font-size: 2.5rem;
 		}
@@ -123,8 +128,8 @@ const swiperItems = [
 		font-size: 1.75rem;
 		font-weight: 500;
 		font-family: var(--bs-font-sans-serif);
-    color: white;
-    opacity: .5;
+		color: white;
+		opacity: 0.5;
 
 		@media screen and (max-width: 1600px) {
 			line-height: 1.5;
@@ -145,7 +150,7 @@ const swiperItems = [
 	padding: 1rem;
 	background: var(--bs-primary);
 	border-radius: 99rem;
-  transition: all .2s;
+	transition: all 0.2s;
 
 	&::after {
 		font-family: "Font Awesome 6 Free";
@@ -167,10 +172,10 @@ const swiperItems = [
 	right: 5rem;
 	left: unset;
 	top: unset;
-  
+
 	@media screen and (max-width: 992px) {
-    right: 2rem;
-    bottom: 2rem;
+		right: 2rem;
+		bottom: 2rem;
 	}
 
 	&::after {
@@ -186,10 +191,10 @@ const swiperItems = [
 	@media screen and (max-width: 1400px) {
 		right: calc(5rem + 1rem + 4rem);
 	}
-  
+
 	@media screen and (max-width: 992px) {
-    right: calc(2rem + 1rem + 4rem);
-    bottom: 2rem;
+		right: calc(2rem + 1rem + 4rem);
+		bottom: 2rem;
 	}
 
 	&::after {
@@ -222,11 +227,11 @@ const swiperItems = [
 		width: 1.5rem;
 		border-radius: 0.25rem;
 		height: 0.5rem;
-    background: rgba(var(--bs-white-rgb), .25);
-    opacity: 1;
-    
+		background: rgba(var(--bs-white-rgb), 0.25);
+		opacity: 1;
+
 		&.swiper-pagination-bullet-active {
-      background: var(--bs-primary);
+			background: var(--bs-primary);
 		}
 	}
 }

@@ -6,7 +6,7 @@
 					<img :src="imageLogo" alt="logo" class="navbar-logo" />
 				</router-link>
 				<button
-					class="btn btn-link d-lg-none"
+					class="btn btn-link btn-toggler d-lg-none"
 					type="button"
 					data-bs-toggle="offcanvas"
 					data-bs-target="#sidebarMenu"
@@ -61,7 +61,7 @@
 			></button>
 		</div>
 		<div class="offcanvas-body">
-			<ul class="nav flex-column">
+			<ul class="nav sidenav-menu">
 				<li v-for="(item, index) in menuItems" :key="index" class="nav-item">
 					<router-link
 						class="nav-link"
@@ -154,6 +154,19 @@ export default defineComponent({
 		border-radius: 0 0 1rem 1rem;
 		border: 1px solid transparent;
 
+		.btn-toggler {
+			--bs-btn-hover-color: var(--bs-white);
+			--bs-btn-active-color: var(--bs-white);
+			--bs-btn-color: var(--bs-white);
+
+			transition: all 0.2s;
+			height: 3rem;
+			width: 3rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
 		.nav-item {
 			.nav-link {
 				position: relative;
@@ -196,6 +209,10 @@ export default defineComponent({
 
 				&:hover {
 					color: var(--bs-white);
+
+					&::after {
+						width: 0;
+					}
 				}
 			}
 		}
@@ -203,8 +220,17 @@ export default defineComponent({
 		&.scrolled {
 			padding: 1rem 1.5rem;
 			background: rgba(lighten(#805231, 60%), 0.75);
-			backdrop-filter: blur(1rem);
+			backdrop-filter: blur(0.5rem);
 			border-color: rgba(lighten(#805231, 60%), 0.25);
+
+			.btn-toggler {
+				--bs-btn-hover-color: var(--bs-primary);
+				--bs-btn-active-color: var(--bs-primary);
+				--bs-btn-color: var(--bs-primary);
+
+				margin-right: -1rem;
+				padding: 0;
+			}
 
 			.nav-item {
 				.nav-link {
@@ -237,6 +263,35 @@ export default defineComponent({
 						color: var(--bs-white);
 					}
 				}
+			}
+		}
+	}
+}
+
+.offcanvas .sidenav-menu {
+	flex-direction: column;
+  gap: .5rem;
+
+	.nav-item {
+		.nav-link {
+			--bs-nav-link-padding-y: 0.75rem;
+			--bs-nav-link-padding-x: 1rem;
+
+			border-radius: 0.5rem;
+			transition: all 0.2s;
+      background: var(--bs-nav-link-bg);
+      color: var(--bs-nav-link-color);
+
+			&:hover {
+				--bs-nav-link-color: var(--bs-primary);
+				--bs-nav-link-bg: rgba(var(--bs-primary-rgb), 0.125);
+			}
+
+			&.active,
+			&:active,
+			&:focus {
+				--bs-nav-link-color: var(--bs-white);
+				--bs-nav-link-bg: var(--bs-primary);
 			}
 		}
 	}

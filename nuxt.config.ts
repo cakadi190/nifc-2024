@@ -3,6 +3,14 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
+    [
+      'dayjs-nuxt', {
+        locales: ['en', 'id'],
+        defaultLocale: 'id',
+        defaultTimezone: 'Asia/Jakarta',
+        plugins: ['relativeTime', 'utc', 'timezone'],
+      }
+    ],
     'nuxt-icon',
     '@vueuse/motion/nuxt',
     'nuxt-swiper',
@@ -24,6 +32,9 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'id'
+      },
       link: [
         { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css' },
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
