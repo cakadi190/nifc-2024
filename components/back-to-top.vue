@@ -53,18 +53,22 @@ onUnmounted(() => {
   outline: none;
   cursor: pointer;
   opacity: .5;
-  transition: all .3s ease;
+  transition: all .3s;
   border-radius: .5rem;
   font-size: 1rem;
   z-index: 1000;
+  display: block;
+  line-height: 1;
 
   &.hide {
     opacity: 0;
     bottom: 0;
+    display: none;
   }
 }
 
 .back-to-top:hover {
   opacity: 1;
+  border-radius: 99rem;
 }
 </style>

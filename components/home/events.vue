@@ -92,10 +92,26 @@
 
 					<div class="event-overlay">
 						<div
-							class="w-100 h-100 gap-3 d-flex align-items-center justify-content-center"
+							class="w-100 p-3 text-center h-100 gap-2 flex-column d-flex align-items-center justify-content-center"
 						>
-							<Icon name="bi:ticket-perforated" size="48" />
-							<h3 class="mb-0">HTM: {{ item.price > 0 ? formatCurrency(item.price) : 'Gratis!!!' }}</h3>
+							<div
+								class="d-flex justify-content-center gap-2 align-items-center flex-column"
+							>
+								<Icon name="bi:ticket-perforated" size="48" />
+								<h3 class="mb-0">
+									HTM:
+									{{
+										item.price > 0 ? formatCurrency(item.price) : "Gratis!!!"
+									}}
+								</h3>
+							</div>
+
+							<div>
+								Pastikan anda sudah membaca
+								<router-link to="/syarat-dan-ketentuan"
+									>Syarat & Ketentuan</router-link
+								>.
+							</div>
 						</div>
 					</div>
 				</div>
@@ -260,7 +276,7 @@ const formatCurrency = (amount: number) =>
 		left: 0;
 		right: 0;
 		bottom: 0;
-		transition: all 0.2s;
+		transition: all 0.5s;
 		backdrop-filter: blur(0.5rem);
 		opacity: 0;
 	}
