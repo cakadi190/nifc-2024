@@ -67,6 +67,7 @@ export default defineComponent({
 		.left-side {
 			background: url("/images/manusia-purba.jpg") no-repeat center center;
 			background-size: cover;
+      min-height: 25rem;
 		}
 	}
 
