@@ -95,14 +95,7 @@ const swiperItems = [
 		left: 0;
 		width: 100%; /* Lebar gradient */
 		height: 100%;
-		background: linear-gradient(
-			-295deg,
-			rgba(255, 255, 255, 1) 35%,
-			rgba(255, 255, 255, 0.8) 55%,
-			rgba(255, 255, 255, 0.6) 75%,
-			rgba(255, 255, 255, 0.4) 85%,
-			rgba(255, 255, 255, 0.25)
-		);
+		background: rgba(0,0,0,.75);
 	}
 
 	.row {
@@ -118,6 +111,7 @@ const swiperItems = [
 		margin-bottom: 1.5rem;
 		font-family: var(--bs-font-serif);
 		line-height: 1.25;
+    color: white;
 
 		@media screen and (max-width: 1600px) {
 			line-height: 1.25;
@@ -129,6 +123,8 @@ const swiperItems = [
 		font-size: 1.75rem;
 		font-weight: 500;
 		font-family: var(--bs-font-sans-serif);
+    color: white;
+    opacity: .5;
 
 		@media screen and (max-width: 1600px) {
 			line-height: 1.5;
@@ -226,9 +222,11 @@ const swiperItems = [
 		width: 1.5rem;
 		border-radius: 0.25rem;
 		height: 0.5rem;
-
+    background: rgba(var(--bs-white-rgb), .25);
+    opacity: 1;
+    
 		&.swiper-pagination-bullet-active {
-			background: var(--bs-primary);
+      background: var(--bs-primary);
 		}
 	}
 }

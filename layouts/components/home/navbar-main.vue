@@ -9,8 +9,8 @@
 					class="btn btn-link d-lg-none"
 					type="button"
 					data-bs-toggle="offcanvas"
-					data-bs-target="#offcanvasExample"
-					aria-controls="offcanvasExample"
+					data-bs-target="#sidebarMenu"
+					aria-controls="sidebarMenu"
 				>
 					<Icon name="fa:bars" />
 				</button>
@@ -46,11 +46,13 @@
 	<div
 		class="offcanvas offcanvas-start"
 		tabindex="-1"
-		id="offcanvasExample"
-		aria-labelledby="offcanvasExampleLabel"
+		id="sidebarMenu"
+		aria-labelledby="sidebarMenuLabel"
 	>
 		<div class="offcanvas-header">
-			<h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+			<router-link class="offcanvas-title" to="/">
+				<img :src="imageLogo" alt="logo" class="navbar-logo" />
+			</router-link>
 			<button
 				type="button"
 				class="btn-close"
@@ -59,24 +61,18 @@
 			></button>
 		</div>
 		<div class="offcanvas-body">
-			<div>
-				Some text as placeholder. In real life you can have the elements you
-				have chosen. Like, text, images, lists, etc.
-			</div>
-			<div class="dropdown mt-3">
-				<button
-					class="btn btn-secondary dropdown-toggle"
-					type="button"
-					data-bs-toggle="dropdown"
-				>
-					Dropdown button
-				</button>
-				<ul class="dropdown-menu">
-					<li><a class="dropdown-item" href="#">Action</a></li>
-					<li><a class="dropdown-item" href="#">Another action</a></li>
-					<li><a class="dropdown-item" href="#">Something else here</a></li>
-				</ul>
-			</div>
+			<ul class="nav flex-column">
+				<li v-for="(item, index) in menuItems" :key="index" class="nav-item">
+					<router-link
+						class="nav-link"
+						:class="{ active: item.active }"
+						aria-current="page"
+						:to="item.link"
+					>
+						{{ item.title }}
+					</router-link>
+				</li>
+			</ul>
 		</div>
 	</div>
 </template>
@@ -155,68 +151,103 @@ export default defineComponent({
 	.navbar {
 		transition: all 0.2s;
 		margin-top: 0;
-		border-radius: 1rem;
+		border-radius: 0 0 1rem 1rem;
 		border: 1px solid transparent;
 
-		.navbar-logo {
-			height: 56px;
-			width: auto;
+		.nav-item {
+			.nav-link {
+				position: relative;
+				color: var(--bs-white);
+				opacity: 0.5;
 
-			@media screen and (max-width: 992px) {
-				height: 32px;
+				&::after {
+					content: "";
+					width: 0;
+					height: 4px;
+					position: absolute;
+					transition: all 0.2s;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					border-radius: 99rem;
+					margin: 0 auto;
+					background: var(--bs-white);
+				}
+
+				&:hover,
+				&.active {
+					opacity: 1;
+					color: var(--bs-white);
+
+					&::after {
+						width: 35%;
+					}
+				}
+			}
+
+			.nav-button {
+				--bs-navbar-nav-link-padding-x: 1rem;
+				--bs-navbar-nav-link-padding-y: 0.75rem;
+
+				opacity: 1;
+				background: var(--bs-primary);
+				color: var(--bs-white);
+				border-radius: var(--bs-border-radius);
+
+				&:hover {
+					color: var(--bs-white);
+				}
 			}
 		}
 
 		&.scrolled {
 			padding: 1rem 1.5rem;
-			background: rgba(lighten(#805231, 55%), 0.75);
+			background: rgba(lighten(#805231, 60%), 0.75);
 			backdrop-filter: blur(1rem);
-			margin-top: 1rem;
-			border-color: rgba(lighten(#805231, 55%), 0.25);
+			border-color: rgba(lighten(#805231, 60%), 0.25);
+
+			.nav-item {
+				.nav-link {
+					opacity: 1;
+					color: var(--bs-dark);
+
+					&::after {
+						background: var(--bs-primary);
+					}
+
+					&:hover,
+					&.active {
+						color: var(--bs-primary);
+
+						&::after {
+							width: 35%;
+						}
+					}
+				}
+
+				.nav-button {
+					--bs-navbar-nav-link-padding-x: 1rem;
+					--bs-navbar-nav-link-padding-y: 0.75rem;
+
+					background: var(--bs-primary);
+					color: var(--bs-white);
+					border-radius: var(--bs-border-radius);
+
+					&:hover {
+						color: var(--bs-white);
+					}
+				}
+			}
 		}
 	}
 }
 
-.nav-item {
-	.nav-link {
-		position: relative;
-		color: var(--bs-dark);
+.navbar-logo {
+	height: 56px;
+	width: auto;
 
-		&::after {
-			content: "";
-			width: 0;
-			height: 4px;
-			position: absolute;
-			transition: all 0.2s;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			border-radius: 99rem;
-			margin: 0 auto;
-			background: var(--bs-primary);
-		}
-
-		&:hover,
-		&.active {
-			color: var(--bs-primary);
-
-			&::after {
-				width: 35%;
-			}
-		}
-	}
-
-	.nav-button {
-		--bs-navbar-nav-link-padding-x: 1rem;
-		--bs-navbar-nav-link-padding-y: 0.75rem;
-
-		background: var(--bs-primary);
-		color: var(--bs-white);
-		border-radius: var(--bs-border-radius);
-
-		&:hover {
-			color: var(--bs-white);
-		}
+	@media screen and (max-width: 992px) {
+		height: 32px;
 	}
 }
 </style>

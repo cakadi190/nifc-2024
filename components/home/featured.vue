@@ -62,7 +62,7 @@ const rowContents = [
 		icon: "material-symbols:av-timer",
 		button: {
 			name: "Kegiatan Mendatang",
-			link: "/kegiatan",
+			link: "/pameran",
 		},
 	},
 	{
