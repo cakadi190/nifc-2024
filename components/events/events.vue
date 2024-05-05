@@ -1,22 +1,6 @@
 <template>
 	<section class="section-ns-wider" id="event-exhibition">
 		<div class="container-small">
-			<div class="row align-items-end mb-5">
-				<div class="col-md-8 mb-4 mb-md-0">
-					<h3 class="section-subtitle text-start opacity-50">Pameran</h3>
-					<h2 class="section-title text-start mb-0">Pameran & Kegiatan</h2>
-				</div>
-				<div class="col-md-4">
-					<router-link
-						to="/pameran"
-						class="me-auto text-decoration-none justify-content-start justify-content-md-end text-end d-flex gap-2 align-items-center"
-					>
-						<span>Lihat Semua</span>
-						<i class="fas fa-chevron-right"></i>
-					</router-link>
-				</div>
-			</div>
-
 			<div class="d-flex flex-column gap-3">
         <event-card v-for="(item, index) in eventList" :key="index" :item="item" />
 			</div>
@@ -77,6 +61,47 @@ const eventList = ref([
 			{ name: "Amal", slug: "amal" },
 			{ name: "Lingkungan", slug: "lingkungan" },
 		],
+	},
+  
+	{
+		image: "/images/events/pameran-fosil.jpg",
+		title: "Pameran Artefak Prasejarah",
+		date: ["2024-05-02 10:00:00", "2024-05-02 15:00:00"],
+		place: "Aula Utama Museum Trinil",
+		price: 12000,
+		kategori: [{ name: "Pameran", slug: "pameran" }],
+	},
+	{
+		image: "/images/events/pameran-fosil.jpg",
+		title: "Pameran Seni Pra Sejarah",
+		date: ["2024-05-08 09:00:00", "2024-05-08 13:00:00"],
+		place: "Gedung Serbaguna Ngawi",
+		price: 8000,
+		kategori: [{ name: "Pameran", slug: "pameran" }],
+	},
+	{
+		image: "/images/events/pameran-fosil.jpg",
+		title: "Pameran Batu-batu Prasejarah",
+		date: ["2024-05-15 11:00:00", "2024-05-15 16:00:00"],
+		place: "Lapangan Desa Trinil",
+		price: 15000,
+		kategori: [{ name: "Pameran", slug: "pameran" }],
+	},
+	{
+		image: "/images/events/pameran-fosil.jpg",
+		title: "Pameran Perkakas Prasejarah",
+		date: ["2024-05-22 10:30:00", "2024-05-22 14:30:00"],
+		place: "Taman Kota Ngawi",
+		price: 11000,
+		kategori: [{ name: "Pameran", slug: "pameran" }],
+	},
+	{
+		image: "/images/events/pameran-fosil.jpg",
+		title: "Pameran Prasasti-prasasti Kuno",
+		date: ["2024-05-29 13:00:00", "2024-05-29 17:00:00"],
+		place: "Gedung Pemerintahan Ngawi",
+		price: 17000,
+		kategori: [{ name: "Pameran", slug: "pameran" }],
 	},
 ]);
 
