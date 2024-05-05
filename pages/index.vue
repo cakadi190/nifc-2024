@@ -5,28 +5,28 @@ import eventSection from "~/components/home/events.vue";
 import funfactSection from "~/components/home/funfact.vue";
 import blogSection from "~/components/home/blog.vue";
 
+const title = ref(
+	"Museum Trinil • Menelusuri Jejak Manusia Purba dan Keajaiban Paleontologi"
+);
+const desc = ref(
+	"Jejak manusia purba dan keajaiban paleontologi terungkap di sini. Temukan peninggalan kuno yang memikat dan cerita tentang evolusi manusia yang menarik di Museum Trinil yang menakjubkan."
+);
+
 useSeoMeta({
-	title:
-		"Museum Trinil • Menelusuri Jejak Manusia Purba dan Keajaiban Paleontologi",
-	description:
-		"Jejak manusia purba dan keajaiban paleontologi terungkap di sini. Temukan peninggalan kuno yang memikat dan cerita tentang evolusi manusia yang menarik di Museum Trinil yang menakjubkan.",
-	ogTitle:
-		"Museum Trinil • Menelusuri Jejak Manusia Purba dan Keajaiban Paleontologi",
-	ogDescription:
-		"Jejak manusia purba dan keajaiban paleontologi terungkap di sini. Temukan peninggalan kuno yang memikat dan cerita tentang evolusi manusia yang menarik di Museum Trinil yang menakjubkan.",
-	twitterTitle:
-		"Museum Trinil • Menelusuri Jejak Manusia Purba dan Keajaiban Paleontologi",
-	twitterDescription:
-		"Jejak manusia purba dan keajaiban paleontologi terungkap di sini. Temukan peninggalan kuno yang memikat dan cerita tentang evolusi manusia yang menarik di Museum Trinil yang menakjubkan.",
+	title: title,
+	description: desc,
+	ogTitle: title,
+	ogDescription: desc,
+	twitterTitle: title,
+	twitterDescription: desc,
 	ogUrl: "/",
-	ogImage: "/images/manusia-purba.jpg",
-	twitterImage: "/images/manusia-purba.jpg",
+	ogImage: "/images/slider-home/1.jpg",
+	twitterImage: "/images/slider-home/1.jpg",
 	twitterCard: "summary_large_image",
 });
 
 useHead({
-	title:
-		"Museum Trinil • Menelusuri Jejak Manusia Purba dan Keajaiban Paleontologi",
+	title: title,
 	htmlAttrs: {
 		lang: "id",
 	},
