@@ -20,11 +20,11 @@
 			</div>
 
 			<div class="row gy-4">
-				<div class="col-md-4" v-for="(item, index) in blogItem" :key="index">
+				<div class="col-md-4" v-for="(item, index) in sortedBlogItems" :key="index">
 					<div class="card card-blog card-body rounded-5 p-4">
 						<div class="ratio ratio-16x9 overflow-hidden rounded-4 mb-4">
-              <nuxt-img class="w-100 mb-4" :src="item.thumbnail" />
-            </div>
+							<nuxt-img class="w-100 mb-4" :src="item.thumbnail" />
+						</div>
 
 						<time
 							:datetime="$dayjs(item.created_at).toString()"
@@ -79,9 +79,9 @@ const blogItem = [
 	},
 	{
 		thumbnail: "/images/blog/maintenance.jpg",
-		title: "Perawatan dan Pemeliharaan: Pentingnya Merawat Aset Anda",
-		desc: "Perawatan dan pemeliharaan adalah bagian penting dari mempertahankan nilai aset Anda. Tanpa perawatan yang tepat, aset dapat mengalami penurunan kualitas dan nilai seiring waktu. Mari jelajahi pentingnya perawatan yang tepat untuk menjaga aset Anda tetap berkinerja optimal.",
-		created_at: "2024-05-05 10:30:00",
+		title: "Museum Trinil Tutup Sementara",
+		desc: "Halo sobat Arkeolog! Mohon maaf ya, untuk sementara Museum Trinil ini kami tutup terlebih dahulu dikarenakan kami sedang melakukan pemeriksaan dan perbaikan berkala untuk memastikan kenyamanan dan keamanan sobat ketika berkunjung ke Museum Trinil hingga tanggal 08 Agustus mendatang ya. Bagi yang sudah memesan tiket untuk masuk ke dalam museum dan ingin mengembalikan uang pembelian (refund) bisa langsung hubungi admin dibawah ini ya.",
+		created_at: "2023-07-25 10:30:00",
 		category: [
 			{ name: "Blog", slug: "blog" },
 			{ name: "Maintenance", slug: "maintenance" },
@@ -126,7 +126,7 @@ const blogItem = [
 		thumbnail: "/images/blog/amal.jpeg",
 		title: "Keindahan Memberi: Kisah-Kisah Inspiratif dari Dunia Amal",
 		desc: "Memberi adalah tindakan mulia yang memiliki dampak besar dalam kehidupan orang lain maupun diri sendiri. Melalui kisah-kisah inspiratif dari dunia amal, kita dapat memahami betapa pentingnya memiliki hati yang penuh kasih dan kepedulian terhadap sesama. Temukan cerita-cerita menginspirasi tentang kebaikan dan pengabdian.",
-		created_at: "2024-05-07 08:15:00",
+		created_at: "2023-05-07 08:15:00",
 		category: [
 			{ name: "Blog", slug: "blog" },
 			{ name: "Charity", slug: "charity" },
@@ -138,6 +138,19 @@ const blogItem = [
 		},
 	},
 ];
+
+const parseDate = (dateString: string): Date => {
+	const [date, time] = dateString.split(" ");
+	const [year, month, day] = date.split("-").map(Number);
+	const [hours, minutes, seconds] = time.split(":").map(Number);
+	return new Date(year, month - 1, day, hours, minutes, seconds);
+};
+
+const sortedBlogItems = blogItem.slice().sort((a, b) => {
+	const dateA = parseDate(a.created_at);
+	const dateB = parseDate(b.created_at);
+	return dateB.getTime() - dateA.getTime();
+});
 </script>
 
 <style lang="scss" scoped>

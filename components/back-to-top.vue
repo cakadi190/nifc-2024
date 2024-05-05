@@ -57,7 +57,6 @@ onUnmounted(() => {
   border-radius: .5rem;
   font-size: 1rem;
   z-index: 1000;
-  display: block;
   line-height: 1;
 
   &.hide {
