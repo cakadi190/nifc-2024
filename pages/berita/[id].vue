@@ -1,11 +1,13 @@
 <template>
 	<div id="blog-content-page">
 		<header-section />
+    <blog-section />
 	</div>
 </template>
 
 <script lang="ts" setup>
 import headerSection from "~/components/berita-slug/header.vue";
+import blogSection from "~/components/berita-slug/blog.vue";
 
 /** ==============================================
  * SEO META TAG

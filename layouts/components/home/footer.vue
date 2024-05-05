@@ -4,7 +4,7 @@
 		<div class="footer-top">
 			<div class="container-small">
 				<div class="row">
-					<div class="mb-5 mb-lg-0 col-md-5">
+					<div class="mb-5 mb-xl-0 col-xl-5">
 						<router-link class="text-decoration-none d-flex mb-3" to="/">
 							<img :src="imageLogo" alt="logo" height="96" width="auto" />
 						</router-link>
@@ -17,7 +17,7 @@
 						</p>
 					</div>
 
-					<div class="mb-5 mb-lg-0 col-md-3">
+					<div class="mb-5 mb-xl-0 col-md-6 col-lg-4 col-xl-3">
 						<h3 class="text-white mb-4">Hubungi</h3>
 						<p class="text-white opacity-75">
 							<strong>Sekretariat Museum Trinil</strong><br />Pilang, Kawu, Kec. Kedunggalar,
@@ -43,7 +43,7 @@
 						</div>
 					</div>
 
-					<div class="mb-5 mb-lg-0 col-md-2">
+					<div class="mb-5 mb-xl-0 col-md-6 col-lg-4 col-xl-2">
 						<h3 class="text-white mb-4">Tautan Lain</h3>
 						<ul class="list-unstyled d-flex flex-column gap-3">
               <li v-for="(item, index) in otherLinks" :key="index">
@@ -51,7 +51,7 @@
               </li>
             </ul>
 					</div>
-          <div class="mb-5 mb-lg-0 col-md-2">
+          <div class="mb-5 mb-xl-0 col-md-12 col-lg-4 col-xl-2">
             <nuxt-img src="/images/lets-encrypt.png" height="96" width="auto" />
           </div>
 				</div>

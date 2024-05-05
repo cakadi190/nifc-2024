@@ -1,5 +1,6 @@
 <template>
-	<router-link :to="`/berita/${toSlug(item.title)}`" class="text-decoration-none card card-blog card-body rounded-5 p-4">
+	<lazy-client-only>
+    <router-link :to="`/berita/${toSlug(item.title)}`" class="text-decoration-none card card-blog card-body rounded-5 p-4">
 		<div class="ratio ratio-16x9 overflow-hidden rounded-4 mb-4">
 			<nuxt-img :alt="item.title" class="w-100 mb-4" :src="item.thumbnail" />
 		</div>
@@ -14,6 +15,7 @@
 
 		<a href="#" class="stretched-link text-decoration-none">Baca Lebih</a>
 	</router-link>
+  </lazy-client-only>
 </template>
 
 <script lang="ts" setup>

@@ -81,7 +81,7 @@ const rowContents = [
 		icon: "ion:ticket-outline",
 		button: {
 			name: "Dapatkan Tiket",
-			link: "/get-ticket",
+			link: "/pameran",
 		},
 	},
 ];

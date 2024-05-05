@@ -1,12 +1,12 @@
 <template>
 	<nav class="fixed-top w-100" id="main-navbar">
 		<div class="container-wider">
-			<nav class="navbar navbar-expand-lg">
+			<nav class="navbar navbar-expand-xl">
 				<router-link class="navbar-brand pe-0 pe-md-4" to="/">
 					<img :src="imageLogo" alt="logo" class="navbar-logo" />
 				</router-link>
 				<button
-					class="btn btn-link btn-toggler d-lg-none"
+					class="btn btn-link btn-toggler d-xl-none"
 					type="button"
 					data-bs-toggle="offcanvas"
 					data-bs-target="#sidebarMenu"
