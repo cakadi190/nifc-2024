@@ -41,6 +41,10 @@ onMounted(() => {
 		min-height: 10rem;
 		padding: 7.5rem 1rem;
 
+		@media screen and (max-width: 992px) {
+			padding: 7.5rem 0;
+		}
+
 		.section-title {
 			text-align: center;
 			font-size: 3.5rem;
