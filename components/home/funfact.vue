@@ -60,7 +60,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 #funfact {
-	background: darken(#805231, 30%);
+	background: darken(#805231, 25%);
 	padding: 0 0.75rem;
 
 	.row {

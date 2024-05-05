@@ -19,6 +19,8 @@ onMounted(() => {
 </script>
 
 <template>
+	<nuxt-loading-indicator color="#805231" :height="4" />
+
 	<nuxt-layout>
 		<nuxt-page />
 	</nuxt-layout>
