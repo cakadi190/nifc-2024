@@ -3,7 +3,7 @@
 		<div class="row gap-0">
 			<div class="col-md-6 left-side"></div>
 			<div class="col-md-6">
-				<div class="p-5 px-3 px-md-5">
+				<div class="p-5 px-1 px-md-5">
 					<h4 class="section-subtitle">Sedikit Spoiler</h4>
 					<h3 class="text-white section-title text-start">
 						Awal Mula Museum Trinil Berdiri
@@ -22,21 +22,27 @@
           <router-link class="readmore" to="/tentang">Pelajari Lebih Lanjut</router-link>
 
           <div class="row counter pt-5">
-            <div class="col-md-4 mb-4">
+            <div class="col-xl-4 mb-4">
               <div class="d-flex gap-3 align-items-center">
-                <h3>759</h3>
+                <h3>
+                  <count-up :end-val="759" />
+                </h3>
                 <strong>Pameran dan Kegiatan</strong>
               </div>
             </div>
-            <div class="col-md-4 mb-4">
+            <div class="col-xl-4 mb-4">
               <div class="d-flex gap-3 align-items-center">
-                <h3>5.2K</h3>
-                <strong>Pengunjung Tahun Ini</strong>
+                <h3>
+                  <count-up :end-val="544" />
+                </h3>
+                <strong>Pengunjung Bulan Ini</strong>
               </div>
             </div>
-            <div class="col-md-4 mb-4">
+            <div class="col-xl-4 mb-4">
               <div class="d-flex gap-3 align-items-center">
-                <h3>10</h3>
+                <h3>
+                  <count-up :end-val="27" />
+                </h3>
                 <strong>Penghargaan Yang Diraih</strong>
               </div>
             </div>
@@ -56,6 +62,7 @@ export default defineComponent({
 </script>
 
 <script lang="ts" setup>
+import CountUp from 'vue-countup-v3';
 </script>
 
 <style lang="scss" scoped>
