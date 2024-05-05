@@ -3,21 +3,26 @@
 		<div class="overlay" />
 		<div class="container-small">
 			<div class="row justify-content-center">
-				<div class="col-md-6 text-center">
+				<div class="col-md-8 text-center">
 					<h1 class="text-white title">Informasi dan Berita</h1>
 					<p class="text-white subtitle">
-						Semua terkait dengan Museum Trinil dan artikel menarik.
+						Informasi Sobat Arkeolog: Museum Trinil Tutup Sementara
 					</p>
 
-					<nav aria-label="breadcrumb" class="pt-4">
+					<nav aria-label="breadcrumb" class="pt-3">
 						<ol class="breadcrumb mb-0 justify-content-center">
 							<li class="breadcrumb-item">
 								<router-link class="text-white opacity-50" to="/"
 									>Beranda</router-link
 								>
 							</li>
+							<li class="breadcrumb-item text-white" aria-current="page">
+								<router-link class="text-white opacity-50" to="/berita"
+									>Informasi dan Berita</router-link
+								>
+							</li>
 							<li class="breadcrumb-item text-white active" aria-current="page">
-								Informasi dan Berita
+								Informasi Sobat Arkeolog: Museum Trinil Tutup Sementara
 							</li>
 						</ol>
 					</nav>
@@ -40,7 +45,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 #masthead {
-	background: url("/images/museum_trinil.jpg") no-repeat center center;
+	background: url("/images/blog/maintenance.jpg") no-repeat center center;
 	background-size: cover;
 	position: relative;
 

@@ -56,25 +56,59 @@ const blogItem = [
 		},
 	},
 	{
-		thumbnail: "/images/blog/maintenance.jpg",
-		title: "Informasi Sobat Arkeolog: Museum Trinil Tutup Sementara",
-		desc: "Halo sobat Arkeolog! Mohon maaf ya, untuk sementara Museum Trinil ini kami tutup terlebih dahulu dikarenakan kami sedang melakukan pemeriksaan dan perbaikan berkala untuk memastikan kenyamanan dan keamanan sobat ketika berkunjung ke Museum Trinil hingga tanggal 08 Agustus mendatang ya. Bagi yang sudah memesan tiket untuk masuk ke dalam museum dan ingin mengembalikan uang pembelian (refund) bisa langsung hubungi admin dibawah ini ya.",
-		created_at: "2023-07-25 10:30:00",
+		thumbnail: "/images/blog/museum_trinil.jpg",
+		title:
+			"Menelusuri Sejarah: Mengungkap Keindahan dan Misteri di Museum Trinil",
+		desc: "Museum Trinil merupakan sebuah tempat yang memikat hati para pengunjung dengan koleksi artefak prasejarah yang menakjubkan. Dari fosil-fosil purba hingga artefak manusia purba, mari kita telusuri keindahan dan misteri yang tersembunyi di dalam Museum Trinil.",
+		created_at: "2024-05-04 10:00:00",
 		category: [
 			{ name: "Blog", slug: "blog" },
-			{ name: "Maintenance", slug: "maintenance" },
+			{ name: "History", slug: "history" },
 		],
 		author: {
-			name: "Dian Puspita",
-			email: "dianpuspita@example.com",
-			image: "/images/blog/author2.jpg",
+			name: "Fitri Utami",
+			email: "fitriutami@example.com",
+			image: "/images/blog/author12.jpg",
+		},
+	},
+	{
+		thumbnail: "/images/blog/patung_prasejarah.jpg",
+		title:
+			"Karya Seni Prasejarah: Memahami Kehidupan Manusia Purba Melalui Patung-Patung Prasejarah",
+		desc: "Patung-pratung prasejarah memberikan pandangan unik tentang kehidupan manusia purba. Dari kegiatan sehari-hari hingga kepercayaan spiritual, mari kita eksplorasi karya seni prasejarah yang mempesona ini dan mencoba memahami dunia mereka melalui patung-patung yang mereka tinggalkan.",
+		created_at: "2024-05-02 11:30:00",
+		category: [
+			{ name: "Blog", slug: "blog" },
+			{ name: "Art", slug: "art" },
+		],
+		author: {
+			name: "Rizki Pratama",
+			email: "rizkipratama@example.com",
+			image: "/images/blog/author13.jpg",
+		},
+	},
+	{
+		thumbnail: "/images/blog/peninggalan_peradaban.jpg",
+		title:
+			"Jejak Peradaban: Mengungkap Peninggalan Budaya di Situs Arkeologi Terkenal",
+		desc: "Situs arkeologi merupakan saksi bisu dari perjalanan panjang peradaban manusia. Dari piramida Mesir hingga Machu Picchu, mari kita menjelajahi jejak-jejak peradaban yang kaya dan menarik yang tertinggal di situs arkeologi terkenal di seluruh dunia.",
+		created_at: "2024-05-01 14:00:00",
+		category: [
+			{ name: "Blog", slug: "blog" },
+			{ name: "Archaeology", slug: "archaeology" },
+		],
+		author: {
+			name: "Sinta Dewi",
+			email: "sintadewi@example.com",
+			image: "/images/blog/author14.jpg",
 		},
 	},
 	{
 		thumbnail: "/images/blog/bengawan_solo.jpg",
-		title: "Melintasi Sejarah: Eksplorasi Legenda Bengawan Solo Yang Ikonik Banget",
+		title:
+			"Melintasi Sejarah: Eksplorasi Legenda Bengawan Solo Yang Ikonik Banget",
 		desc: "Bengawan Solo adalah salah satu sungai terpanjang di Pulau Jawa, Indonesia, yang melintasi beragam wilayah dengan keindahan alam yang memukau. Namun, keindahan alamnya bukanlah satu-satunya daya tariknya. Bengawan Solo juga dikenal karena kaya akan nilai sejarah dan mitos yang melegenda. Mari kita telusuri jejak sejarah dan cerita-cerita mistis yang terkait dengan sungai yang memikat hati ini.",
-		created_at: "2024-05-08 11:00:00",
+		created_at: "2024-05-05 11:00:00",
 		category: [
 			{ name: "Blog", slug: "blog" },
 			{ name: "History", slug: "history" },
@@ -98,21 +132,6 @@ const blogItem = [
 			name: "Budi Santoso",
 			email: "budisantoso@example.com",
 			image: "/images/blog/author3.jpg",
-		},
-	},
-	{
-		thumbnail: "/images/blog/amal.jpeg",
-		title: "Keindahan Memberi: Kisah-Kisah Inspiratif dari Dunia Amal",
-		desc: "Memberi adalah tindakan mulia yang memiliki dampak besar dalam kehidupan orang lain maupun diri sendiri. Melalui kisah-kisah inspiratif dari dunia amal, kita dapat memahami betapa pentingnya memiliki hati yang penuh kasih dan kepedulian terhadap sesama. Temukan cerita-cerita menginspirasi tentang kebaikan dan pengabdian.",
-		created_at: "2023-05-07 08:15:00",
-		category: [
-			{ name: "Blog", slug: "blog" },
-			{ name: "Charity", slug: "charity" },
-		],
-		author: {
-			name: "Citra Lestari",
-			email: "citralestari@example.com",
-			image: "/images/blog/author4.jpg",
 		},
 	},
 ];

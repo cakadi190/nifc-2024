@@ -64,7 +64,7 @@ const blogItem = [
 		title:
 			"Menelusuri Sejarah: Mengungkap Keindahan dan Misteri di Museum Trinil",
 		desc: "Museum Trinil merupakan sebuah tempat yang memikat hati para pengunjung dengan koleksi artefak prasejarah yang menakjubkan. Dari fosil-fosil purba hingga artefak manusia purba, mari kita telusuri keindahan dan misteri yang tersembunyi di dalam Museum Trinil.",
-		created_at: "2024-05-08 10:00:00",
+		created_at: "2024-05-04 10:00:00",
 		category: [
 			{ name: "Blog", slug: "blog" },
 			{ name: "History", slug: "history" },
@@ -144,7 +144,7 @@ const blogItem = [
 		title:
 			"Melintasi Sejarah: Eksplorasi Legenda Bengawan Solo Yang Ikonik Banget",
 		desc: "Bengawan Solo adalah salah satu sungai terpanjang di Pulau Jawa, Indonesia, yang melintasi beragam wilayah dengan keindahan alam yang memukau. Namun, keindahan alamnya bukanlah satu-satunya daya tariknya. Bengawan Solo juga dikenal karena kaya akan nilai sejarah dan mitos yang melegenda. Mari kita telusuri jejak sejarah dan cerita-cerita mistis yang terkait dengan sungai yang memikat hati ini.",
-		created_at: "2024-05-08 11:00:00",
+		created_at: "2024-05-05 11:00:00",
 		category: [
 			{ name: "Blog", slug: "blog" },
 			{ name: "History", slug: "history" },
@@ -198,60 +198,6 @@ const sortedBlogItems = blogItem.slice().sort((a, b) => {
 	const dateA = parseDate(a.created_at);
 	const dateB = parseDate(b.created_at);
 	return dateB.getTime() - dateA.getTime();
-});
-
-/** ==============================================
- * SEO META TAG
- ============================================== */
-const title = ref("Informasi dan Berita • Museum Trinil");
-const desc = ref(
-	"Semua informasi dan berita terkait Museum Trinil ada disini."
-);
-
-useSeoMeta({
-	title: title,
-	description: desc,
-	ogTitle: title,
-	ogDescription: desc,
-	twitterTitle: title,
-	twitterDescription: desc,
-	ogUrl: "/berita",
-	ogImage: "/images/slider-home/1.jpg",
-	twitterImage: "/images/slider-home/1.jpg",
-	twitterCard: "summary_large_image",
-});
-
-useHead({
-	title: title,
-	htmlAttrs: {
-		lang: "id",
-	},
-	link: [
-		{
-			rel: "icon",
-			type: "image/png",
-			href: "/favicon.ico",
-		},
-
-		{
-			rel: "apple-touch-icon",
-			sizes: "180x180",
-			href: "/apple-touch-icon.png",
-		},
-		{
-			rel: "icon",
-			type: "image/png",
-			sizes: "32x32",
-			href: "/favicon-32x32.png",
-		},
-		{
-			rel: "icon",
-			type: "image/png",
-			sizes: "16x16",
-			href: "/favicon-16x16.png",
-		},
-		{ rel: "manifest", href: "/site.webmanifest" },
-	],
 });
 </script>
 

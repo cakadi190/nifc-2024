@@ -33,7 +33,7 @@
 					</ul>
 					<ul class="navbar-nav gap-3 ms-auto">
 						<li class="nav-item">
-							<router-link to="/get-ticket" class="nav-link nav-button"
+							<router-link to="/pameran" class="nav-link nav-button"
 								>Pesan Tiket</router-link
 							>
 						</li>
