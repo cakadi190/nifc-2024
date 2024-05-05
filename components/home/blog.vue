@@ -20,7 +20,7 @@
 			</div>
 
 			<div class="row gy-4">
-				<div class="col-md-4" v-for="(item, index) in sortedBlogItems" :key="index">
+				<div class="col-xl-4 col-md-6" v-for="(item, index) in sortedBlogItems" :key="index">
 					<div class="card card-blog card-body rounded-5 p-4">
 						<div class="ratio ratio-16x9 overflow-hidden rounded-4 mb-4">
 							<nuxt-img class="w-100 mb-4" :src="item.thumbnail" />
