@@ -23,7 +23,7 @@
 
           <div class="row counter pt-5">
             <div class="col-xl-4 mb-4">
-              <div class="d-flex gap-3 align-items-center">
+              <div class="d-flex flex-column flex-xxl-row text-center text-xxl-start gap-3 align-items-center">
                 <h3>
                   <count-up :end-val="759" />
                 </h3>
@@ -31,7 +31,7 @@
               </div>
             </div>
             <div class="col-xl-4 mb-4">
-              <div class="d-flex gap-3 align-items-center">
+              <div class="d-flex flex-column flex-xxl-row text-center text-xxl-start gap-3 align-items-center">
                 <h3>
                   <count-up :end-val="544" />
                 </h3>
@@ -39,7 +39,7 @@
               </div>
             </div>
             <div class="col-xl-4 mb-4">
-              <div class="d-flex gap-3 align-items-center">
+              <div class="d-flex flex-column flex-xxl-row text-center text-xxl-start gap-3 align-items-center">
                 <h3>
                   <count-up :end-val="27" />
                 </h3>
