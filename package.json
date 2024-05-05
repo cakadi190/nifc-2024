@@ -25,6 +25,7 @@
     "nuxt-swiper": "^1.2.2",
     "sass": "^1.76.0",
     "vue": "^3.4.21",
+    "vue-countup-v3": "^1.4.1",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
