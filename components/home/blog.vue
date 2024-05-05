@@ -10,7 +10,7 @@
 				</div>
 				<div class="col-md-4">
 					<router-link
-						to="/pameran"
+						to="/berita"
 						class="me-auto text-decoration-none justify-content-start justify-content-md-end text-end d-flex gap-2 align-items-center"
 					>
 						<span>Lihat Semua</span>
@@ -21,26 +21,7 @@
 
 			<div class="row gy-4">
 				<div class="col-xl-4 col-md-6" v-for="(item, index) in sortedBlogItems" :key="index">
-					<div class="card card-blog card-body rounded-5 p-4">
-						<div class="ratio ratio-16x9 overflow-hidden rounded-4 mb-4">
-							<nuxt-img class="w-100 mb-4" :src="item.thumbnail" />
-						</div>
-
-						<time
-							:datetime="$dayjs(item.created_at).toString()"
-							class="blog-time"
-						>
-							<i class="fas fa-calendar"></i>
-							<span>{{ $dayjs(item.created_at).format("DD MMMM YYYY") }}</span>
-						</time>
-
-						<h3 class="blog-title">{{ item.title }}</h3>
-						<p>{{ truncateParagraph(item.desc, 200) }}</p>
-
-						<a href="#" class="stretched-link text-decoration-none"
-							>Baca Lebih</a
-						>
-					</div>
+          <blog-card :item="item" />
 				</div>
 			</div>
 		</div>
@@ -56,10 +37,7 @@ export default defineComponent({
 </script>
 
 <script lang="ts" setup>
-const truncateParagraph = (paragraph: string, maxLength: number): string =>
-	paragraph.length > maxLength
-		? paragraph.substring(0, maxLength).replace(/\s\w+$/, "...")
-		: paragraph;
+import blogCard from "../blog-card.vue";
 
 const blogItem = [
 	{
@@ -152,35 +130,3 @@ const sortedBlogItems = blogItem.slice().sort((a, b) => {
 	return dateB.getTime() - dateA.getTime();
 });
 </script>
-
-<style lang="scss" scoped>
-.card-blog {
-	border-radius: 0.75rem;
-	overflow: hidden;
-	box-shadow: 0 0 2rem 0.5rem rgba(0, 0, 0, 0.05);
-
-	.blog-title {
-		font-family: var(--bs-font-serif);
-		font-weight: normal;
-		font-size: 1.75rem;
-	}
-
-	.blog-time {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0.5rem;
-		position: absolute;
-		font-size: 0.875em;
-		padding: 0.5rem 0.75rem;
-		background: var(--bs-body-bg);
-		top: 2.5rem;
-		left: 2.5rem;
-		border-radius: var(--bs-border-radius-lg);
-
-		i {
-			color: rgba(lighten(#805231, 15%), 0.75);
-		}
-	}
-}
-</style>

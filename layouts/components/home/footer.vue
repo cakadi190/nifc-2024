@@ -84,6 +84,7 @@ const otherLinks = [
   { name: "Tentang Kami", link: "/tentang" },
   { name: "Pameran & Kegiatan", link: "/pameran" },
   { name: "Galeri", link: "/galeri" },
+  { name: "Informasi & Berita", link: "/berita" },
   { name: "Hubungi Kami", link: "/hubungi" },
 ];
 </script>

@@ -2,7 +2,7 @@
 	<nav class="fixed-top w-100" id="main-navbar">
 		<div class="container-wider">
 			<nav class="navbar navbar-expand-lg">
-				<router-link class="navbar-brand" to="/">
+				<router-link class="navbar-brand pe-0 pe-md-4" to="/">
 					<img :src="imageLogo" alt="logo" class="navbar-logo" />
 				</router-link>
 				<button
@@ -23,7 +23,7 @@
 						>
 							<router-link
 								class="nav-link"
-								:class="{ active: item.active }"
+								:class="{ active: isCurrentUrl(item.link) }"
 								aria-current="page"
 								:to="item.link"
 							>
@@ -65,7 +65,7 @@
 				<li v-for="(item, index) in menuItems" :key="index" class="nav-item">
 					<router-link
 						class="nav-link"
-						:class="{ active: item.active }"
+						:class="{ active: isCurrentUrl(item.link) }"
 						aria-current="page"
 						:to="item.link"
 					>
@@ -86,53 +86,68 @@ interface MenuItem {
 	title: string;
 	link: string;
 	active?: boolean;
-}
+};
+
+/**
+ * Checking if is current url
+ * 
+ * @param {string} currentUrl
+ * @returns boolean
+ */
+const isCurrentUrl = (currentUrl: string): boolean => 
+  routes.fullPath === currentUrl;
 
 const menuItems: MenuItem[] = [
-	{ 
-    title: "Beranda", 
-    link: "/", 
-    active: routes.fullPath === "/" 
-  },
+	{
+		title: "Beranda",
+		link: "/",
+	},
 	{
 		title: "Pameran",
 		link: "/pameran",
-		active: routes.fullPath === "/pameran",
 	},
-	{ title: "Galeri", link: "/galeri", active: routes.fullPath === "/galeri" },
+	{
+		title: "Galeri",
+		link: "/galeri",
+	},
+	{
+		title: "Informasi",
+		link: "/berita",
+	},
 	{
 		title: "Tentang Kami",
 		link: "/tentang",
-		active: routes.fullPath === "/tentang",
 	},
 	{
 		title: "Hubungi Kami",
 		link: "/hubungi",
-		active: routes.fullPath === "/hubungi",
 	},
 ];
+
+const onScrolled = (scrollValue: number, navbar: JQuery<any>) => {
+	scrollValue = $(window).scrollTop() as number;
+
+	if (scrollValue >= 50) {
+		navbar.find(".navbar").addClass("scrolled");
+		navbar
+			.find(".container-wider")
+			.addClass("container-small")
+			.removeClass("container-wider");
+	} else {
+		navbar.find(".navbar").removeClass("scrolled");
+		navbar
+			.find(".container-small")
+			.addClass("container-wider")
+			.removeClass("container-small");
+	}
+};
 
 const initNavbarScrolled = () => {
 	let navbar: JQuery<HTMLElement> = $("#main-navbar");
 	let scrollValue: number = 0;
 
-	$(window).on("scroll", () => {
-		scrollValue = $(window).scrollTop() as number;
-
-		if (scrollValue >= 50) {
-			navbar.find(".navbar").addClass("scrolled");
-			navbar
-				.find(".container-wider")
-				.addClass("container-small")
-				.removeClass("container-wider");
-		} else {
-			navbar.find(".navbar").removeClass("scrolled");
-			navbar
-				.find(".container-small")
-				.addClass("container-wider")
-				.removeClass("container-small");
-		}
-	});
+	onScrolled(scrollValue, navbar);
+	$(window).on("scroll", () => onScrolled(scrollValue, navbar));
 };
 
 onMounted(initNavbarScrolled);
@@ -274,7 +289,7 @@ export default defineComponent({
 
 .offcanvas .sidenav-menu {
 	flex-direction: column;
-  gap: .5rem;
+	gap: 0.5rem;
 
 	.nav-item {
 		.nav-link {
@@ -283,8 +298,8 @@ export default defineComponent({
 
 			border-radius: 0.5rem;
 			transition: all 0.2s;
-      background: var(--bs-nav-link-bg);
-      color: var(--bs-nav-link-color);
+			background: var(--bs-nav-link-bg);
+			color: var(--bs-nav-link-color);
 
 			&:hover {
 				--bs-nav-link-color: var(--bs-primary);

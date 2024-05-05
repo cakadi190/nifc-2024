@@ -19,7 +19,7 @@
     "@vueuse/motion": "^2.1.0",
     "bootstrap": "^5.3.3",
     "dayjs-nuxt": "^2.1.9",
-    "jquery": "^3.7.1",
+    "jquery": "3.7.1",
     "nuxt": "^3.11.2",
     "nuxt-svgo": "^4.0.0",
     "nuxt-swiper": "^1.2.2",
