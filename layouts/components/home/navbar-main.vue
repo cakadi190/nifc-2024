@@ -89,18 +89,22 @@ interface MenuItem {
 }
 
 const menuItems: MenuItem[] = [
-	{ title: "Beranda", link: "/", active: routes.fullPath === "/" },
-	{
-		title: "Tentang Kami",
-		link: "/tentang",
-		active: routes.fullPath === "/tentang",
-	},
+	{ 
+    title: "Beranda", 
+    link: "/", 
+    active: routes.fullPath === "/" 
+  },
 	{
 		title: "Pameran",
 		link: "/pameran",
 		active: routes.fullPath === "/pameran",
 	},
 	{ title: "Galeri", link: "/galeri", active: routes.fullPath === "/galeri" },
+	{
+		title: "Tentang Kami",
+		link: "/tentang",
+		active: routes.fullPath === "/tentang",
+	},
 	{
 		title: "Hubungi Kami",
 		link: "/hubungi",
