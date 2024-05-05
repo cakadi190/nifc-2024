@@ -3,6 +3,7 @@ import headerSlider from '~/components/home/header-slider.vue';
 import featuredSection from '~/components/home/featured.vue';
 import eventSection from '~/components/home/events.vue';
 import funfactSection from '~/components/home/funfact.vue';
+import blogSection from '~/components/home/blog.vue';
 
 useSeoMeta({
 	title: "Museum Trinil • Menelusuri Jejak Manusia Purba dan Keajaiban Paleontologi",
@@ -25,5 +26,6 @@ useHead({
     <featured-section />
     <event-section />
     <funfact-section />
+    <blog-section />
 	</div>
 </template>

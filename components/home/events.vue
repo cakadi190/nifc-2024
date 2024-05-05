@@ -9,7 +9,7 @@
 				<div class="col-md-4">
 					<router-link
 						to="/pameran"
-						class="me-auto text-decoration-none justify-content-start justify-content-lg-end text-end d-flex gap-2 align-items-center"
+						class="me-auto text-decoration-none justify-content-start justify-content-md-end text-end d-flex gap-2 align-items-center"
 					>
 						<span>Lihat Semua</span>
 						<i class="fas fa-chevron-right"></i>
@@ -58,7 +58,7 @@
 						</div>
 						<div class="col-md-6 right-side">
 							<div
-								class="d-flex flex-column flex-md-row align-items-start align-items-lg-center justify-content-between px-0 px-md-3"
+								class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center justify-content-between px-0 px-md-3"
 							>
 								<div class="event-detail pt-4 pt-md-0">
 									<div class="d-flex gap-2">
@@ -101,7 +101,7 @@
 								<h3 class="mb-0">
 									HTM:
 									{{
-										item.price > 0 ? formatCurrency(item.price) : "Gratis!!!"
+										item.price > 0 ? formatCurrency(item.price) + " / Orang" : "Gratis!!!"
 									}}
 								</h3>
 							</div>
@@ -166,7 +166,7 @@ const eventList = [
 		image: "/images/events/charity.jpeg",
 		title: "Konser Amal untuk Lingkungan",
 		date: ["2024-05-10 18:00:00", "2024-05-10 22:00:00"],
-		place: "Pelataran Museum Trinil",
+		place: "Alun-Alun Timur Ngawi",
 		price: 0,
 		kategori: [
 			{ name: "Konser", slug: "konser" },
