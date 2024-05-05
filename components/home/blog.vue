@@ -64,7 +64,7 @@ const truncateParagraph = (paragraph: string, maxLength: number): string =>
 const blogItem = [
 	{
 		thumbnail: "/images/blog/bbm.jpg",
-		title: "BBM Kita Berasal Dari Fosil Lho!",
+		title: "Tahukah Kamu: BBM Kita Terbuat dan Berasal Dari Fosil Lho!",
 		desc: "Apakah Anda pernah bertanya-tanya dari mana asal mula bahan bakar minyak (BBM) yang begitu penting dalam kehidupan sehari-hari kita? Jawabannya tersembunyi dalam jejak fosil yang melintasi jutaan tahun sejarah bumi. BBM, termasuk minyak bumi, gas alam, dan batu bara, adalah hasil dari proses alami penguraian sisa-sisa organisme laut dan darat di dalam lapisan tanah. Inilah yang membuatnya disebut sebagai sumber energi fosil.",
 		created_at: "2024-01-13 12:22:15",
 		category: [
@@ -79,7 +79,7 @@ const blogItem = [
 	},
 	{
 		thumbnail: "/images/blog/maintenance.jpg",
-		title: "Museum Trinil Tutup Sementara",
+		title: "Informasi Sobat Arkeolog: Museum Trinil Tutup Sementara",
 		desc: "Halo sobat Arkeolog! Mohon maaf ya, untuk sementara Museum Trinil ini kami tutup terlebih dahulu dikarenakan kami sedang melakukan pemeriksaan dan perbaikan berkala untuk memastikan kenyamanan dan keamanan sobat ketika berkunjung ke Museum Trinil hingga tanggal 08 Agustus mendatang ya. Bagi yang sudah memesan tiket untuk masuk ke dalam museum dan ingin mengembalikan uang pembelian (refund) bisa langsung hubungi admin dibawah ini ya.",
 		created_at: "2023-07-25 10:30:00",
 		category: [
@@ -94,7 +94,7 @@ const blogItem = [
 	},
 	{
 		thumbnail: "/images/blog/bengawan_solo.jpg",
-		title: "Melintasi Sejarah: Eksplorasi Legenda Bengawan Solo",
+		title: "Melintasi Sejarah: Eksplorasi Legenda Bengawan Solo Yang Ikonik Banget",
 		desc: "Bengawan Solo adalah salah satu sungai terpanjang di Pulau Jawa, Indonesia, yang melintasi beragam wilayah dengan keindahan alam yang memukau. Namun, keindahan alamnya bukanlah satu-satunya daya tariknya. Bengawan Solo juga dikenal karena kaya akan nilai sejarah dan mitos yang melegenda. Mari kita telusuri jejak sejarah dan cerita-cerita mistis yang terkait dengan sungai yang memikat hati ini.",
 		created_at: "2024-05-08 11:00:00",
 		category: [
@@ -111,7 +111,7 @@ const blogItem = [
 		thumbnail: "/images/blog/eksplorasi.jpg",
 		title: "Menjelajahi Dunia: Petualangan di Balik Eksplorasi",
 		desc: "Eksplorasi merupakan bagian penting dari pengembangan diri dan pengetahuan manusia. Dari eksplorasi lautan yang dalam hingga penjelajahan luar angkasa, dunia kita penuh dengan keajaiban yang menunggu untuk ditemukan. Temukan kisah inspiratif dari para penjelajah yang berani mengeksplorasi wilayah yang belum dijelajahi.",
-		created_at: "2024-05-06 09:45:00",
+		created_at: "2024-03-06 09:45:00",
 		category: [
 			{ name: "Blog", slug: "blog" },
 			{ name: "Exploration", slug: "exploration" },
