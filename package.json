@@ -14,6 +14,7 @@
     "@fontsource/rubik": "^5.0.19",
     "@nuxt/image": "^1.6.0",
     "@nuxtjs/google-fonts": "^3.2.0",
+    "@splidejs/vue-splide": "^0.6.12",
     "@types/bootstrap": "^5.2.10",
     "@types/jquery": "^3.5.29",
     "@vueuse/motion": "^2.1.0",
@@ -24,8 +25,13 @@
     "nuxt-svgo": "^4.0.0",
     "nuxt-swiper": "^1.2.2",
     "sass": "^1.76.0",
+    "simplebar": "^6.2.6",
+    "simplebar-vue": "^2.3.4",
     "vue": "^3.4.21",
+    "vue-3-fullscreen-image-directive-plugin": "^1.0.4",
     "vue-countup-v3": "^1.4.1",
+    "vue-lightbox": "^1.1.6",
+    "vue-masonry-css": "^1.0.3",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {

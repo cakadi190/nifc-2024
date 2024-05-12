@@ -129,6 +129,7 @@ $scrollbar-hover-color: #472b0f;
 /* Gaya umum untuk scrollbar */
 ::-webkit-scrollbar {
 	width: 10px; /* Lebar scrollbar */
+  height: 10px;
 }
 
 /* Gaya untuk bagian yang bisa di-geser */

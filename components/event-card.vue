@@ -59,7 +59,7 @@
 					</div>
 
 					<router-link
-						to="/"
+						to="/pameran/sample-exhibition"
 						class="event-book mt-3 mt-md-0 btn-lg btn btn-primary"
 					>
 						Lihat Detail

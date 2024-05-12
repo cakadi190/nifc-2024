@@ -59,7 +59,7 @@ const modules = [SwiperAutoplay, SwiperPagination, SwiperNavigation];
 
 const swiperItems = [
 	{
-		title: "Jelajahi Keberadaban Manusia Purba di Musium Trinil",
+		title: "Kebudayaan Manusia Purba di Musium Trinil",
 		desc: "Temukan jejak manusia purba di Musium Trinil dengan eksplorasi yang memukau dalam sejarah evolusi manusia.",
 		background: "/images/slider-home/1.jpg",
 	},
