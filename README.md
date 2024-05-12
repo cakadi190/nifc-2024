@@ -1,9 +1,6 @@
-# Nuxt, Bootstrap and jQuery Scaffolding
+# NIFC 2024
 
-This is base template and scaffolding to build a Nuxt 3 project with Bootstrap and jQuery.
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-Look at the [Bootstrap Core Docs](https://getbootstrap.com/docs/5.3/getting-started/introduction/) to learn more.
-Look at the [jQuery Main Docs](https://api.jquery.com/) to learn more.
+This is the "Trinil Museum" landing page project for the NIFC 2024 competition by Muhammadiyah Riau University.
 
 ## Setup
 
