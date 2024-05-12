@@ -20,7 +20,7 @@ import GridGallery from "~/components/gallery-component.vue";
 const galleryImages = [
 	{ src: "https://picsum.photos/400/600", alt: "Image 1" },
 	{ src: "https://picsum.photos/500/350", alt: "Image 2" },
-	{ src: "https://picsum.photos/600/400", alt: "Image 3" },
+	{ src: "https://picsum.photos/500/350", alt: "Image 3" },
 	{ src: "https://picsum.photos/450/500", alt: "Image 4" },
 	{ src: "https://picsum.photos/550/350", alt: "Image 5" },
 	{ src: "https://picsum.photos/480/600", alt: "Image 6" },

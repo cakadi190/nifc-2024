@@ -2,12 +2,14 @@
   <div id="exhibition-details-page">
     <header-section />
     <event-section />
+    <event-next-prev />
   </div>
 </template>
 
 <script lang="ts" setup>
 import headerSection from '~/components/events-slug/header.vue';
 import eventSection from '~/components/events-slug/event-section.vue';
+import eventNextPrev from '~/components/events-slug/event-next-prev.vue';
 
 const title = ref(
 	"Pameran Prasasti-Prasati Kuno • Museum Trinil"

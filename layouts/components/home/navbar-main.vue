@@ -114,10 +114,10 @@ const menuItems: MenuItem[] = [
 		title: "Informasi",
 		link: "/berita",
 	},
-	{
-		title: "Tentang Kami",
-		link: "/tentang",
-	},
+	// {
+	// 	title: "Tentang Kami",
+	// 	link: "/tentang",
+	// },
 	{
 		title: "Hubungi Kami",
 		link: "/hubungi",
